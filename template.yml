@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Python file including external library
+Resources:
+ SampleFunction:
+  Type: AWS::Serverless::Function
+  Properties:
+   Handler: shopSmart1.shopSmart
+   Description: cicd-puzzle-game
+   Runtime: python3.8
+   FunctionName: cicd-puzzle-game
+   CodeUri: . #Directory the source file is
+   MemorySize: 128
+   Timeout: 5
